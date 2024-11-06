@@ -1,0 +1,17 @@
+syntax =  "proto3";
+
+package seer;
+
+service Seer {
+  rpc Convert(ConversionRequest) returns (ConversionResponse);
+}
+
+message ConversionRequest {
+  string from = 1;
+  string to = 2;
+  float value = 3;
+}
+
+message ConversionResponse {
+  float result = 1;
+}
